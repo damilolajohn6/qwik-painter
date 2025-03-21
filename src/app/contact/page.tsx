@@ -4,9 +4,9 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { FaPhone, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
-//import dynamic from "next/dynamic";
+import dynamic from "next/dynamic";
 
-//const Map = dynamic(() => import("@/components/Map"), { ssr: false });
+const Map = dynamic(() => import("@/components/Map"), { ssr: false });
 
 const contacts = [
   {
@@ -170,7 +170,7 @@ const ContactPage = () => {
           </Button>
         </form>
       </div>
-      {/* <Map /> */}
+      <Map />
     </div>
   );
 };
